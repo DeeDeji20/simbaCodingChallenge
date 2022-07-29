@@ -37,10 +37,8 @@ pipeline {
                 }
             }
         }
-         stage('Deploy') {
-            when {
-                branch 'main'
-            }
+        
+        stage('Deploy') {
             steps {
                 echo 'Deploy the app'
             }
