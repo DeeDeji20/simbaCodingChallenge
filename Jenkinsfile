@@ -33,7 +33,8 @@ pipeline {
                     echo 'Running linting'
                     sh 'golint .'
                     echo 'Running test'
-                    sh 'cd test && cd repository && go test -v && cd services && go test -v'
+                    sh 'cd test && cd repository && go test -v'
+                    sh 'cd test && cd services && go test -v'
                 }
             }
         }
