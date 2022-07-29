@@ -33,8 +33,16 @@ pipeline {
                     echo 'Running linting'
                     sh 'golint .'
                     echo 'Running test'
-                    sh 'cd test && go test -v'
+//                     sh 'cd test && go test -v'
                 }
+            }
+        }
+         stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo 'Deploy the app'
             }
         }
         
