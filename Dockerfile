@@ -10,9 +10,9 @@ RUN go mod download
 
 COPY . ./
 
-RUN go build 
+RUN go build github.com/djfemz/simbaCodingChallenge
 
 
-EXPOSE 8080
+EXPOSE 8082
 
-CMD [ "go", "./main" ]
+CMD ["go", "run", "./main.go"]

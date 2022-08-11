@@ -31,7 +31,7 @@ func main() {
 	router.Handle("/user/login", user)
 
 	server := http.Server{
-		Addr:    ":8080",
+		Addr:    ":8082",
 		Handler: router,
 	}
 	err := server.ListenAndServe()
